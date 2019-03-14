@@ -1,1 +1,54 @@
-Hello World
+<html>
+<head>
+  <title>API4KP - Technical Specification and Reference Implementation</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">API for Knowledge Platforms (API4KP)</h1>
+<h2 style="text-align: center;">Technical Specification and Reference Implementation</h2>
+<p>The API4KP standard is based on a model-driven architecture that combines UML models, OWL
+  ontologies and OpenAPI specifcations to define a platform, technology and vendor independent way
+  to build and interact Knowledge Based Systems.</p>
+<h3>Specification</h3>
+<ul>
+  <li><a href="http://www.omgwiki.org/API4KB/lib/exe/fetch.php?media=api4kb:rfp.pdf">RFP</a></li>
+  <li>Standard <a
+      href="https://docs.google.com/document/d/1IPJwiBhkTKXryfuioqeMe5fL3KFHYrVOOGIwjnkvEBQ/edit?usp=sharing">Documentation</a>
+  </li>
+  <li>Machine Consumable <a href="https://github.com/API4KBs/api4kbs">Documents</a></li>
+</ul>
+<h3>Reference Implementations</h3>
+<h4>Mayo Clinic</h4>
+<p>The Mayo Clinic "Knowledge Management and Delivery" Team has released a reference implementation
+  of a "Knowledge Management and Delivery Platform" proof-of-concept.</p>
+<p><span style="color: #ff0000;">Disclaimer</span>:<br/>This implementation was developed as part of
+  a research project. <br/>It is experimental, and offered 'as is' with no support under the Apache
+  2.0 license</p>
+<p>The implementation consists of the following core modules (in build order)</p>
+<ol>
+  <li><a href="https://github.com/API4KBs/kmdp-bom">KMDP BOM</a>&nbsp;<br/>The "Bill of Materials"
+    setting common dependencies
+  </li>
+  <li><a href="https://github.com/API4KBs/api4kbs">API4KP Specification</a><br/>Packages and deploys
+    the API4KP machine consumable documents
+  </li>
+  <li><a href="https://github.com/API4KBs/kmdp-models">KMDP Models</a><br/>Compiles the
+    platform-independent specification into a Java-oriented platform-specific one
+  </li>
+  <li><a href="https://github.com/API4KBs/kmdp-archetype">KMDP Spring Maven Archetype</a><br/>Infrastructure
+    for a Spring-based, ReSTful implementation of the APIs
+  </li>
+  <li><a href="https://github.com/API4KBs/kmdp-api">KMDP API Framework</a><br/>Further compiles the
+    platform-independent API specification into a Java+Spring Web Service Framework
+  </li>
+</ol>
+<p>Reference implementations of the Services are also provided (in build order)</p>
+<ol>
+  <li><a href="https://github.com/API4KBs/kmdp-artifact-repository">Knowledge Artifact Repository -
+    JCR</a><br/>JCR-based persistence layer to support the storage and retrieval of knowledge
+    artifacts&nbsp;
+  </li>
+  <li>Coming soon...</li>
+</ol>
+</body>
+</html>
