@@ -3,55 +3,126 @@
   <title>API4KP - Technical Specification and Reference Implementation</title>
 </head>
 <body>
-
 <h1 style="text-align: center;">API for Knowledge Platforms (API4KP)</h1>
 <h2 style="text-align: center;">Technical Specification and Reference Implementation</h2>
-<p>The API4KP standard is based on a model-driven architecture that combines UML models, OWL
-  ontologies and OpenAPI specifcations to define a platform, technology and vendor independent way
-  to build and interact Knowledge Based Systems.</p>
+<p>The API4KP standard is based on a model-driven architecture that combines UML models, OWL ontologies and OpenAPI specifcations to define a platform, technology and vendor independent way to build and interact Knowledge Based Systems.</p>
 <h3>Specification</h3>
 <ul>
   <li><a href="http://www.omgwiki.org/API4KB/lib/exe/fetch.php?media=api4kb:rfp.pdf">RFP</a></li>
-  <li>Standard <a
-      href="https://docs.google.com/document/d/1IPJwiBhkTKXryfuioqeMe5fL3KFHYrVOOGIwjnkvEBQ/edit?usp=sharing">Documentation</a>
-  </li>
+  <li>Standard <a href="https://docs.google.com/document/d/1IPJwiBhkTKXryfuioqeMe5fL3KFHYrVOOGIwjnkvEBQ/edit?usp=sharing">Documentation</a></li>
   <li>Machine Consumable Documents (<a href="https://github.com/API4KBs/api4kbs">GitHub</a>)</li>
 </ul>
 <h3>Reference Implementations</h3>
 <h4>Mayo Clinic</h4>
-<p>The Mayo Clinic "Knowledge Management and Delivery" Team has released a reference implementation
-  of a "Knowledge Management and Delivery Platform" proof-of-concept.</p>
-<p><span style="color: #ff0000;">Disclaimer</span>:<br/>This implementation was developed as part of
-  a research project. <br/>It is experimental, and offered 'as is' with no support under the Apache
-  2.0 license</p>
-<p>The implementation consists of the following core modules (in build order)</p>
+<p>The Mayo Clinic "Knowledge Management and Delivery" Team has released a reference implementation of a "Knowledge Management and Delivery Platform" proof-of-concept.</p>
+<p><span style="color: #ff0000;">Disclaimer</span>:<br />This implementation is offered 'as is', with no guarantee of support, under the Apache 2.0 license. The software can be used freely, but any organization that wants to use the Mayo Clinic <em>name or logo</em> must submit a <a href="mailto:businessrelations@mayo.edu">written request to Mayo Clinic</a> for review and approval.</p>
+<p>The implementation consists of the following libraries:</p>
 <ol>
-  <li><a href="https://github.com/API4KBs/kmdp-bom">KMDP BOM</a>&nbsp;<br/>The "Bill of Materials"
-    setting common dependencies
+  <li><a href="https://github.com/API4KBs/kmdp-bom">KMDP BOM</a>&nbsp;<br />The "Bill of Materials" setting common dependencies</li>
+  <li><a href="https://github.com/API4KBs/api4kbs">API4KP Specification</a><br />Packages and deploys the API4KP machine consumable documents</li>
+  <li><a href="https://github.com/API4KBs/kmdp-models">KMDP Models</a><br />Compiles the platform-independent specification into a Java-oriented platform-specific one <img style="width: 40%; height: 40%;" src="img/API%20Models%20Toolchain.png" alt="Architecture Flow" /></li>
+  <li><a href="https://github.com/API4KBs/kmdp-standard-models-impl">KMDP Standard Models</a><br />Java implementation of standard schemas, languages and metamodels</li>
+  <li><a href="https://github.com/API4KBs/kmdp-archetype">KMDP Spring Maven Archetype</a><br />Infrastructure for a Spring-based, ReSTful implementation of the APIs</li>
+  <li><a href="https://github.com/API4KBs/kmdp-api">KMDP API Framework</a><br />Further compiles the platform-independent API specification into a Java+Spring Web Service Framework</li>
+</ol>
+<p>Reference implementations of the Services are also provided (in build order):</p>
+<ol>
+  <li><a href="https://github.com/API4KBs/kmdp-language">Language Service</a><br />Functions for the syntactic manipulation of Knowledge Artifacts (e.g. parsing/serialization, validation, translation) &nbsp;</li>
+  <li><a href="https://github.com/API4KBs/kmdp-artifact-repository">Knowledge Artifact Repository - JCR</a><br />JCR-based persistence layer to support the storage and retrieval of knowledge artifacts&nbsp;</li>
+  <li><a href="https://github.com/API4KBs/kmdp-asset-repository">Knowledge Asset Repository</a><br />Logical Repository with support for metadata, discovery and content negotiation&nbsp;</li>
+  <li>Inference Service<br />Coming soon...</li>
+</ol>
+<p>The following modules support the build process</p>
+<ol>
+  <li><a href="https://github.com/API4KBs/maven-cfg-archetype-plugin">Configurable Maven Archetype</a><br />Instantiates Mvn Archetypes using parameters from .properties files.<br />Used to generate client and server modules for 'API Framework'</li>
+  <li><a href="https://github.com/API4KBs/maven-enforcer-rules">Maven Enforcer Rules</a> (optional)<br />Validates quality criteria for 'master' branches</li>
+</ol>
+<h4>Build Instructions</h4>
+<p>Requirements: JDK 8, Maven 3.3.9+</p>
+<ol>
+  <li>Clone / install the configurable archetype plugin
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/maven-cfg-archetype-plugin.git</em></li>
+      <li><em>cd maven-cfg-archetype-plugin</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
   </li>
-  <li><a href="https://github.com/API4KBs/api4kbs">API4KP Specification</a><br/>Packages and deploys
-    the API4KP machine consumable documents
+  <li>Clone / install the API4KP specifications
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/api4kbs.git</em></li>
+      <li><em>cd api4kbs</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
   </li>
-  <li><a href="https://github.com/API4KBs/kmdp-models">KMDP Models</a><br/>Compiles the
-    platform-independent specification into a Java-oriented platform-specific one
-    <img src="img/API%20Models%20Toolchain.png" style="width:40%;height:40%;" alt="Architecture Flow"/>
+  <li>Clone / install the master BOM&nbsp;
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-bom.git</em></li>
+      <li><em>cd kmdp-bom</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
   </li>
-  <li><a href="https://github.com/API4KBs/kmdp-archetype">KMDP Spring Maven Archetype</a><br/>Infrastructure
-    for a Spring-based, ReSTful implementation of the APIs
+  <li>Clone / install the core libraries
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-models.git</em></li>
+      <li><em>cd kmdp-models</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
   </li>
-  <li><a href="https://github.com/API4KBs/kmdp-api">KMDP API Framework</a><br/>Further compiles the
-    platform-independent API specification into a Java+Spring Web Service Framework
+  <li>Clone / install the standard models
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-standard-models-impl.git</em></li>
+      <li><em>cd kmdp-standard-models-impl</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
+  </li>
+  <li>Clone / install the OpenAPI/Spring Archetype
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-archetype.git</em></li>
+      <li><em>cd kmdp-archetype</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
+  </li>
+  <li>Clone / install the API framework
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-api.git</em></li>
+      <li><em>cd kmdp-api</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean package -Prefresh</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
+  </li>
+  <li>Clone / install&nbsp;the Knowledge Artifact Repository implementation<br />
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-artifact-repository.git</em></li>
+      <li><em>cd kmdp-artifact-repository</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
+  </li>
+  <li>Clone / install&nbsp;the Language / Transrepresentation implementation<br />
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-language.git</em></li>
+      <li><em>cd kmdp-language</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
+  </li>
+  <li>Clone / install&nbsp;the Knowledge Asset Repository implementation<br />
+    <ol>
+      <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-asset-repository.git</em></li>
+      <li><em>cd kmdp-asset-repository</em></li>
+      <li><em>(checkout develop)&nbsp;</em></li>
+      <li><em>mvn clean install</em></li>
+    </ol>
   </li>
 </ol>
-<p>Reference implementations of the Services are also provided (in build order)</p>
-<ol>
-  <li><a href="https://github.com/API4KBs/kmdp-language">Language Service</a><br/>Functions for the syntactic manipulation of Knowledge Artifacts (e.g. parsing/serialization, validation, translation) &nbsp;
-  </li>
-  <li><a href="https://github.com/API4KBs/kmdp-artifact-repository">Knowledge Artifact Repository -
-    JCR</a><br/>JCR-based persistence layer to support the storage and retrieval of knowledge
-    artifacts&nbsp;
-  </li>
-  <li>Coming soon...</li>
-</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 </body>
 </html>
