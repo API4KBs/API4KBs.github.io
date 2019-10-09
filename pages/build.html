@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Instructions</title>
+</head>
+<body>
+
+<p>The codebase consists of a multi-module project with dependencies. It is recommended to build the modules in the given order.'
+    <a href="../scripts">Scripts</a> are provided as a reference</p>
+
+<p>Requirements:</p>
+
+<ul>
+    <li>JDK 8</li>
+    <li>Maven 3.3.9+</li>
+</ul>
+
+<p>Notice that JDK 11+ is not yet supported by some of the sub-dependencies)</p>
+
+<ol>
+    <li>Clone / install the configurable archetype plugin
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/maven-cfg-archetype-plugin.git</em></li>
+            <li><em>cd maven-cfg-archetype-plugin</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install the API4KP specifications
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/api4kbs.git</em></li>
+            <li><em>cd api4kbs</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install the master BOM&nbsp;
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-bom.git</em></li>
+            <li><em>cd kmdp-bom</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install the core libraries
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-models.git</em></li>
+            <li><em>cd kmdp-models</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install the standard models
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-standard-models-impl.git</em></li>
+            <li><em>cd kmdp-standard-models-impl</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install the OpenAPI/Spring Archetype
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-archetype.git</em></li>
+            <li><em>cd kmdp-archetype</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install the API framework
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-api.git</em></li>
+            <li><em>cd kmdp-api</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean package -Prefresh</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install&nbsp;the Knowledge Artifact Repository implementation<br />
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-artifact-repository.git</em></li>
+            <li><em>cd kmdp-artifact-repository</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install&nbsp;the Language / Transrepresentation implementation<br />
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-language.git</em></li>
+            <li><em>cd kmdp-language</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+    <li>Clone / install&nbsp;the Knowledge Asset Repository implementation<br />
+        <ol>
+            <li><em>git clone&nbsp;https://github.com/API4KBs/kmdp-asset-repository.git</em></li>
+            <li><em>cd kmdp-asset-repository</em></li>
+            <li><em>(checkout develop)&nbsp;</em></li>
+            <li><em>mvn clean install</em></li>
+        </ol>
+    </li>
+</ol>
+</body>
+</html>
