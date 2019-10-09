@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
     <title>API4KP - Technical Specification and Implementations</title>
   </head>
-  <body>
+  <body bgcolor="#eeeeee">
     <h1 style="text-align: center;">API for Knowledge Platforms (API4KP)</h1>
     <h2 style="text-align: center;">Technical Specification and
       Implementation</h2>
@@ -22,7 +22,7 @@ href="https://docs.google.com/document/d/1IPJwiBhkTKXryfuioqeMe5fL3KFHYrVOOGIwjn
       <li>Machine Consumable Documents (<a
           href="https://github.com/API4KBs/api4kbs">GitHub</a>)</li>
     </ul>
-    <h3>Reference Implementations</h3>
+    <h3>Implementations</h3>
     <h4>Mayo Clinic</h4>
     <p>The Mayo Clinic Knowledge Management and Delivery Team maintains
       the implementation of a "Knowledge Management and Delivery
@@ -35,49 +35,66 @@ href="https://docs.google.com/document/d/1IPJwiBhkTKXryfuioqeMe5fL3KFHYrVOOGIwjn
         or logo</em> must submit a <a
         href="mailto:businessrelations@mayo.edu">written request to Mayo
         Clinic</a> for review and approval.</p>
-    <p>The implementation consists of the following libraries:<br>
-    </p>
-    <table width="100%" border="0" cellspacing="2" cellpadding="2">
+    <ul>
+      <li>KMDP Architecture</li>
+      <li>KMDP Build<br>
+      </li>
+    </ul>
+    <h5>TODO - move to build page<br>
+    </h5>
+    <h5>Libraries<br>
+    </h5>
+    <table width="75%" border="1" cellspacing="2" cellpadding="2">
       <tbody>
         <tr>
-          <td valign="top" align="center"><b>Module</b><br>
+          <td valign="top" bgcolor="#ffffee" align="center"><font
+              size="+1"><b>Module</b></font><br>
           </td>
-          <td valign="top" align="center"><b>Source<br>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Source</font><br>
             </b><a href="https://github.com/API4KBs/">GitHub</a><br>
           </td>
-          <td valign="top" align="center"><b>CI <br>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">CI </font><br>
             </b><a href="https://travis-ci.com/API4KBs">Travis</a><b><br>
             </b></td>
-          <td valign="top" align="center"><b>Maven Repo<br>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Maven Repo</font><br>
             </b><a href="https://bintray.com/api4kbs">Bintray</a><b><br>
             </b></td>
-          <td rowspan="1" colspan="2" valign="top" align="center"><b>Quality<br>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#ffffee"
+            align="center"><b><font size="+1">Quality</font><br>
             </b><a
               href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><b><br>
             </b></td>
-          <td valign="top" align="center"><b>Vulnerabilities<br>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Vulnerabilities</font><br>
             </b><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><b><br>
             </b></td>
         </tr>
         <tr>
-          <td rowspan="2" colspan="1" valign="top"><a
+          <td rowspan="1" colspan="7" valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
               href="https://github.com/API4KBs/kmdp-bom">KMDP BOM</a> <br>
             The "Bill of Materials", setting common dependencies</td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://github.com/API4KBs/kmdp-bom/tree/master">Master</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-bom.svg?branch=master"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-bom/4.0.0/link"><img
 src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-bom/images/download.svg?version=4.0.0"></a></td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://snyk.io//test/github/API4KBs/kmdp-bom?targetFile=pom.xml"><img
 src="https://snyk.io//test/github/API4KBs/kmdp-bom/badge.svg?targetFile=pom.xml"
                 alt="Known Vulnerabilities"
@@ -85,38 +102,38 @@ data-canonical-src="https://snyk.io//test/github/API4KBs/kmdp-bom?targetFile=pom
                 style="max-width:100%;"></a></td>
         </tr>
         <tr>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://github.com/API4KBs/kmdp-bom/tree/develop">Develop</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-bom.svg?branch=develop"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
           </td>
-          <td rowspan="1" colspan="2" valign="top"><br>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
         </tr>
         <tr>
-          <td rowspan="2" colspan="1" valign="top"><a
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
               href="https://github.com/API4KBs/api4kbs">API4KP
               Specification</a><br>
             API4KP machine consumable PIM artifacts</td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://github.com/API4KBs/api4kbs/tree/master">Master</a><br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeee" align="center">ERR<br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/api4kbs/4.0.0/link"><img
 src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/api4kbs/images/download.svg?version=4.0.0"></a></td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://snyk.io//test/github/API4KBs/api4kbs?targetFile=pom.xml"><img
 src="https://snyk.io//test/github/API4KBs/api4kbs/badge.svg?targetFile=pom.xml"
                 alt="Known Vulnerabilities"
@@ -124,32 +141,32 @@ data-canonical-src="https://snyk.io//test/github/API4KBs/api4kbs?targetFile=pom.
                 style="max-width:100%;"></a></td>
         </tr>
         <tr>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://github.com/API4KBs/api4kbs/tree/develop">Develop</a><br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeee" align="center">ERR<br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
           </td>
-          <td rowspan="1" colspan="2" valign="top"><br>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
         </tr>
         <tr>
-          <td rowspan="2" colspan="1" valign="top"><a
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
               href="https://github.com/API4KBs/kmdp-models">KMDP Models</a><br>
             Compiles the PIM models into a Java PSM </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://github.com/API4KBs/kmdp-models/tree/master">Master</a></td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-models.svg?branch=master"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
 href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-models/4.0.0/link"><img
 src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-models/images/download.svg?version=4.0.0"></a></td>
-          <td valign="top" align="center">
+          <td valign="top" bgcolor="#eeeeff" align="center">
             <div><img
 src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=alert_status"
                 alt="" width="148" height="20"><br>
@@ -166,7 +183,7 @@ src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-model
                 alt="" width="133" height="20"><br>
             </div>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
 src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=coverage"
               alt="" width="131" height="20"><br>
             <img
@@ -178,187 +195,418 @@ src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-model
             <img
 src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=code_smells"
               alt="" width="123" height="20"></td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
         </tr>
         <tr>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://github.com/API4KBs/kmdp-models/tree/develop">Develop</a></td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-models.svg?branch=develop"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
           </td>
-          <td rowspan="1" colspan="2" valign="top" align="center"><a
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"
+            align="center"><a
 href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-models">Last
               Build</a><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
         </tr>
         <tr>
-          <td rowspan="2" colspan="1" valign="top"><a
-              href="https://github.com/API4KBs/kmdp-standard-models-impl">KMDP
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
+href="https://github.com/API4KBs/kmdp-standard-models-impl">KMDP
               Standard Models</a><br>
             Java implementation of standard schemas, languages and
             metamodels</td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://github.com/API4KBs/kmdp-standard-models-impl/tree/master">Master</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeee" align="center"><img
 src="https://travis-ci.com/API4KBs/kmdp-standard-models-impl.svg?branch=master"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
 href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-standard-models-impl/4.0.0/link"><img
 src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-standard-models-impl/images/download.svg?version=4.0.0"></a></td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
         </tr>
         <tr>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://github.com/API4KBs/kmdp-standard-models-impl/tree/develop">Develop</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeee" align="center"><img
 src="https://travis-ci.com/API4KBs/kmdp-standard-models-impl.svg?branch=develop"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
           </td>
-          <td rowspan="1" colspan="2" valign="top"><br>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
         </tr>
         <tr>
-          <td rowspan="2" colspan="1" valign="top"><a
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
               href="https://github.com/API4KBs/kmdp-archetype">KMDP
               Spring Maven Archetype</a><br>
             Infrastructure for a Spring-based, ReSTful implementation of
             the APIs</td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://github.com/API4KBs/kmdp-archetype/tree/master">Master</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-archetype.svg?branch=master"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
 href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-archetype/4.0.0/link"><img
 src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-archetype/images/download.svg?version=4.0.0"></a></td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
         </tr>
         <tr>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
               href="https://github.com/API4KBs/kmdp-archetype/tree/develop">Develop</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-archetype.svg?branch=develop"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
           </td>
-          <td rowspan="1" colspan="2" valign="top"><br>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeff"><br>
           </td>
         </tr>
         <tr>
-          <td rowspan="2" colspan="1" valign="top"><a
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
               href="https://github.com/API4KBs/kmdp-api">KMDP API
               Framework</a><br>
             Generates a Java+Spring Web Service Framework PSM<br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://github.com/API4KBs/kmdp-api/tree/master">Master</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeee" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-api.svg?branch=master"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-api/4.0.0/link"><img
 src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-api/images/download.svg?version=4.0.0"></a></td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
         </tr>
         <tr>
-          <td valign="top" align="center"><a
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
               href="https://github.com/API4KBs/kmdp-api/tree/develop">Develop</a><br>
           </td>
-          <td valign="top" align="center"><img
+          <td valign="top" bgcolor="#eeeeee" align="center"><img
               src="https://travis-ci.com/API4KBs/kmdp-api.svg?branch=develop"
               alt="" width="90" height="20"><br>
           </td>
-          <td valign="top" align="center"><br>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
           </td>
-          <td rowspan="1" colspan="2" valign="top"><br>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"><br>
           </td>
-          <td valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top"><br>
-          </td>
-          <td valign="top" align="center"><br>
-          </td>
-          <td valign="top" align="center"><br>
-          </td>
-          <td valign="top" align="center"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
-          </td>
-          <td valign="top"><br>
+          <td valign="top" bgcolor="#eeeeee"><br>
           </td>
         </tr>
       </tbody>
     </table>
-    <p>Implementations of the Services are also provided (in build
-      order):</p>
-    <ol>
-      <li><a href="https://github.com/API4KBs/kmdp-language">Language
-          Service</a><br>
-        Functions for the syntactic manipulation of Knowledge Artifacts
-        (e.g. parsing/serialization, validation, translation) &nbsp;</li>
-      <li><a href="https://github.com/API4KBs/kmdp-artifact-repository">Knowledge
-          Artifact Repository - JCR</a><br>
-        JCR-based persistence layer to support the storage and retrieval
-        of knowledge artifacts&nbsp;</li>
-      <li><a href="https://github.com/API4KBs/kmdp-asset-repository">Knowledge
-          Asset Repository</a><br>
-        Logical Repository with support for metadata, discovery and
-        content negotiation&nbsp;</li>
-      <li>Inference Service<br>
-        Coming soon...</li>
-    </ol>
-    <p>The following modules support the build process</p>
-    <ol>
-      <li><a
-          href="https://github.com/API4KBs/maven-cfg-archetype-plugin">Configurable
-          Maven Archetype</a><br>
-        Instantiates Mvn Archetypes using parameters from .properties
-        files.<br>
-        Used to generate client and server modules for 'API Framework'</li>
-      <li><a href="https://github.com/API4KBs/maven-enforcer-rules">Maven
-          Enforcer Rules</a> (optional)<br>
-        Validates quality criteria for 'master' branches</li>
-    </ol>
+    <h5>Services</h5>
+    <table width="75%" border="1" cellspacing="2" cellpadding="2">
+      <tbody>
+        <tr>
+          <td valign="top" bgcolor="#ffffee" align="center"><font
+              size="+1"><b>Module</b></font><br>
+          </td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Source</font><br>
+            </b><a href="https://github.com/API4KBs/">GitHub</a><br>
+          </td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">CI </font><br>
+            </b><a href="https://travis-ci.com/API4KBs">Travis</a><b><br>
+            </b></td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Maven Repo</font><br>
+            </b><a href="https://bintray.com/api4kbs">Bintray</a><b><br>
+            </b></td>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#ffffee"
+            align="center"><b><font size="+1">Quality</font><br>
+            </b><a
+              href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><b><br>
+            </b></td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Vulnerabilities</font><br>
+            </b><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><b><br>
+            </b></td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="7" valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
+              href="https://github.com/API4KBs/kmdp-language">Transrepresentation
+              ("Language") Service</a><br>
+            Functions for the syntactic manipulation of Knowledge
+            Artifacts <br>
+            (e.g. parsing/serialization, validation, translation)&nbsp;
+            <br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center">Master<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
+href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-language/2.4.0/link"><img
+src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-language/images/download.svg?version=2.4.0"></a></td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#eeeeff" align="center">Develop<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
+              href="https://github.com/API4KBs/kmdp-artifact-repository">Knowledge
+              Artifact Repository - JCR</a><br>
+            JCR-based persistence layer to support the storage and
+            retrieval of Knowledge Artifacts</td>
+          <td valign="top" bgcolor="#eeeeee" align="center">Master<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
+href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-artifact-repository/2.4.0/link"><img
+src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-artifact-repository/images/download.svg?version=2.4.0"></a></td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#eeeeee" align="center">Develop<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
+              href="https://github.com/API4KBs/kmdp-asset-repository">Knowledge
+              Asset Repository</a><br>
+            Logical Repository with support for metadata, discovery and
+            content negotiation <br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center">Master<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#eeeeff" align="center">Develop<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"
+            align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee">Knowledge
+            Base<br>
+            COMING SOON<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff">Inference<br>
+            COMING SOON<br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h5>Build Tools</h5>
+    <table width="75%" border="1" cellspacing="2" cellpadding="2">
+      <tbody>
+        <tr>
+          <td valign="top" bgcolor="#ffffee" align="center"><font
+              size="+1"><b>Module</b></font><br>
+          </td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Source</font><br>
+            </b><a href="https://github.com/API4KBs/">GitHub</a><br>
+          </td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">CI </font><br>
+            </b><a href="https://travis-ci.com/API4KBs">Travis</a><b><br>
+            </b></td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Maven Repo</font><br>
+            </b><a href="https://bintray.com/api4kbs">Bintray</a><b><br>
+            </b></td>
+          <td rowspan="1" colspan="2" valign="top" bgcolor="#ffffee"
+            align="center"><b><font size="+1">Quality</font><br>
+            </b><a
+              href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><b><br>
+            </b></td>
+          <td valign="top" bgcolor="#ffffee" align="center"><b><font
+                size="+1">Vulnerabilities</font><br>
+            </b><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><b><br>
+            </b></td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="7" valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" valign="top" bgcolor="#eeeeff"><a
+href="https://github.com/API4KBs/maven-cfg-archetype-plugin">Configurable
+              Maven Archetype Plugin</a><br>
+            Instantiates Mvn Archetypes using parameters from
+            .properties files.<br>
+            Used to generate client and server modules for the&nbsp;
+            'API Framework'</td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
+              href="https://github.com/API4KBs/maven-cfg-archetype-plugin/tree/master">Master</a><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><img
+src="https://travis-ci.com/API4KBs/maven-cfg-archetype-plugin.svg?branch=master"
+              alt="" width="90" height="20"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><a
+href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/maven-cfg-archetype-plugin/0.2.0/link"><img
+src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/maven-cfg-archetype-plugin/images/download.svg?version=0.2.0"></a></td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeff" align="center"><br>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" valign="top" bgcolor="#eeeeee"><a
+              href="https://github.com/API4KBs/maven-enforcer-rules">Maven
+              Enforcer Rules</a> (optional)<br>
+            Validates quality criteria for 'master' branches</td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
+              href="https://github.com/API4KBs/maven-enforcer-rules/tree/master">Master</a>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><img
+src="https://travis-ci.com/API4KBs/maven-enforcer-rules.svg?branch=master"
+              alt="" width="90" height="20"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><a
+href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/maven-enforcer-rules/1.0.1/link"><img
+src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/maven-enforcer-rules/images/download.svg?version=1.0.1"></a></td>
+          <td valign="top" bgcolor="#eeeeee"> <br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee"><br>
+          </td>
+          <td valign="top" bgcolor="#eeeeee" align="center"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
   </body>
