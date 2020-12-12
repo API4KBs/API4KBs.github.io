@@ -1,832 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <title>Build Instructions</title>
-  </head>
-  <body>
-    <p>The codebase consists of a multi-module project with
-      dependencies. <br>
-      It is recommended to build the modules in the given order.<br>
-    </p>
-    <p><a href="../scripts">Scripts</a> are provided as a reference</p>
-    <p>Requirements:</p>
-    <ul>
-      <li><b>JDK 8</b> <br>
-        <font size="-1">(JDK 11+ is not yet supported by some of the
-          sub-dependencies)</font></li>
-      <li><b>Maven 3.3.9+ <br>
-        </b><font size="-1">(Tested with Maven 3.3.9, 3.5.x and 3.6.x)</font><b><br>
-        </b></li>
-    </ul>
-    <h5>Libraries<br>
-    </h5>
-    <table width="75%" border="1" cellspacing="2" cellpadding="2">
-      <tbody>
-        <tr>
-          <td valign="top" bgcolor="#ffffee" align="center"><font
-              size="+1"><b>Module</b></font><br>
-          </td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Source</font><br>
-            </b><a href="https://github.com/API4KBs/">GitHub</a><br>
-          </td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">CI </font><br>
-            </b><a href="https://travis-ci.com/API4KBs">Travis</a><b><br>
-            </b></td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Maven Repo</font><br>
-            </b><a href="https://bintray.com/api4kbs">Bintray</a><b><br>
-            </b></td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#ffffee"
-            align="center"><b><font size="+1">Quality</font><br>
-            </b><a
-              href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><b><br>
-            </b></td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Vulnerabilities</font><br>
-            </b><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><b><br>
-            </b></td>
-        </tr>
-        <tr>
-          <td rowspan="1" colspan="7" valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
-              href="https://github.com/API4KBs/kmdp-bom">KMDP BOM</a> <br>
-            The "Bill of Materials", setting common dependencies </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-bom/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-bom.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-bom/4.0.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-bom/images/download.svg?version=4.0.0"></a>
-          </td>
-          <td rowspan="2" colspan="2" valign="top" bgcolor="#eeeeff"
-            align="center">N/A<br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://snyk.io//test/github/API4KBs/kmdp-bom?targetFile=pom.xml"><img
-src="https://snyk.io//test/github/API4KBs/kmdp-bom/badge.svg?targetFile=pom.xml"
-                alt="Known Vulnerabilities"
-data-canonical-src="https://snyk.io//test/github/API4KBs/kmdp-bom?targetFile=pom.xml"
-                style="max-width:100%;"></a></td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-bom/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-bom.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-bom/4.0.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-bom/images/download.svg?version=4.0.1"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
-              href="https://github.com/API4KBs/api4kbs">API4KP
-              Specification</a><br>
-            API4KP machine consumable PIM artifacts </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/api4kbs/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-              src="https://travis-ci.com/API4KBs/api4kbs.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/api4kbs/4.0.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/api4kbs/images/download.svg?version=4.0.0"></a>
-          </td>
-          <td rowspan="2" colspan="2" valign="top" bgcolor="#eeeeee"
-            align="center">N/A<br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://snyk.io//test/github/API4KBs/api4kbs?targetFile=pom.xml"><img
-src="https://snyk.io//test/github/API4KBs/api4kbs/badge.svg?targetFile=pom.xml"
-                alt="Known Vulnerabilities"
-data-canonical-src="https://snyk.io//test/github/API4KBs/api4kbs?targetFile=pom.xml"
-                style="max-width:100%;"></a></td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/api4kbs/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-              src="https://travis-ci.com/API4KBs/api4kbs.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/api4kbs/4.0.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/api4kbs/images/download.svg?version=4.0.1"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
-              href="https://github.com/API4KBs/kmdp-models">KMDP Models</a><br>
-            Compiles the PIM models into a Java PSM </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-models/tree/master">Master</a></td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-models.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-models/4.0.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-models/images/download.svg?version=4.0.0"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center">
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=alert_status"
-                alt="" width="148" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=reliability_rating"
-                alt="" width="101" height="20"><br>
-              <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=security_rating"
-                alt="" width="94" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=sqale_rating"
-                alt="" width="133" height="20"><br>
-            </div>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=coverage"
-              alt="" width="131" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=bugs"
-              alt="" width="78" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=vulnerabilities"
-              alt="" width="127" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=code_smells"
-              alt="" width="123" height="20"></td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-models/tree/develop">Develop</a></td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-models.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-models/4.0.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-models/images/download.svg?version=4.0.1"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"
-            align="center"><a
-href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-models">Last
-
-
-
-              Build</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
-href="https://github.com/API4KBs/kmdp-standard-models-impl">KMDP
-              Standard Models</a><br>
-            Java implementation of standard schemas, languages and
-            metamodels </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/kmdp-standard-models-impl/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-src="https://travis-ci.com/API4KBs/kmdp-standard-models-impl.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-standard-models-impl/4.0.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-standard-models-impl/images/download.svg?version=4.0.0"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center">
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=alert_status"
-                alt="" width="148" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=reliability_rating"
-                alt="" width="101" height="20"><br>
-              <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=security_rating"
-                alt="" width="94" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=sqale_rating"
-                alt="" width="133" height="20"><br>
-            </div>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=coverage"
-              alt="" width="131" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=bugs"
-              alt="" width="78" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=vulnerabilities"
-              alt="" width="127" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=code_smells"
-              alt="" width="123" height="20"></td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/kmdp-standard-models-impl/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-src="https://travis-ci.com/API4KBs/kmdp-standard-models-impl.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-standard-models-impl/4.0.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-standard-models-impl/images/download.svg?version=4.0.1"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"
-            align="center"><a
-href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-standard-models-impl">Last
-
-
-
-              Build</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
-              href="https://github.com/API4KBs/kmdp-archetype">KMDP
-              Spring Maven Archetype</a><br>
-            Infrastructure for a Spring-based, ReSTful implementation of
-            the APIs </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-archetype/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-archetype.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-archetype/4.0.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-archetype/images/download.svg?version=4.0.0"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center">
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=alert_status"
-                alt="" width="148" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=reliability_rating"
-                alt="" width="101" height="20"><br>
-              <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=security_rating"
-                alt="" width="94" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=sqale_rating"
-                alt="" width="133" height="20"><br>
-            </div>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=coverage"
-              alt="" width="131" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=bugs"
-              alt="" width="78" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=vulnerabilities"
-              alt="" width="127" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=code_smells"
-              alt="" width="123" height="20"></td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-archetype/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-archetype.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-archetype/4.0.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-archetype/images/download.svg?version=4.0.1"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"
-            align="center"><a
-href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-archetype">Last
-
-
-
-              Build</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
-              href="https://github.com/API4KBs/kmdp-api">KMDP API
-              Framework</a><br>
-            Generates a Java+Spring Web Service Framework PSM<br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/kmdp-api/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-api.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-api/4.0.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-api/images/download.svg?version=4.0.0"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center">
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=alert_status"
-                alt="" width="148" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=reliability_rating"
-                alt="" width="101" height="20"><br>
-              <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=security_rating"
-                alt="" width="94" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=sqale_rating"
-                alt="" width="133" height="20"><br>
-            </div>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><!--<img
+<p>&nbsp;</p>
+<p>The codebase consists of a multi-module project with dependencies. <br /> It is recommended to build the modules in the given order.</p>
+<p><strong>Requirements:</strong></p>
+<ul>
+  <li><strong>JDK 8</strong> <br /> (JDK 11+ is not yet supported by some of the sub-dependencies)</li>
+  <li><strong>Maven 3.3.9+ <br /> </strong>(Tested with Maven 3.3.9, 3.5.x and 3.6.x)<strong><br /> </strong></li>
+</ul>
+<p><strong>Build Instructions</strong></p>
+<ol>
+  <li>Checkout and Build the modules in order, following this script&nbsp;</li>
+</ol>
+<p>&nbsp;</p>
+<h5>Libraries</h5>
+<table border="1" width="75%" cellspacing="2" cellpadding="2">
+  <tbody>
+  <tr>
+    <td align="center" valign="top" bgcolor="#ffffee"><span style="font-size: xx-small;"><strong>Module</strong></span></td>
+    <td align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Source</span><br /> </strong><a href="https://github.com/API4KBs/">GitHub</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Quality</span><br /> </strong><a href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><strong><br /> </strong></td>
+    <td align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Vulnerabilities</span><br /> </strong><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><strong><br /> </strong></td>
+  </tr>
+  <tr>
+    <td colspan="5" rowspan="1" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-bom">KMDP BOM</a> <br /> The "Bill of Materials", setting common dependencies</td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-bom/tree/master">Master</a></td>
+    <td colspan="2" rowspan="2" align="center" valign="top" bgcolor="#eeeeff">N/A</td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://snyk.io//test/github/API4KBs/kmdp-bom?targetFile=pom.xml"><img style="max-width: 100%;" src="https://snyk.io//test/github/API4KBs/kmdp-bom/badge.svg?targetFile=pom.xml" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io//test/github/API4KBs/kmdp-bom?targetFile=pom.xml" /></a></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-bom/tree/develop">Develop</a></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/api4kbs">API4KP Specification</a><br /> API4KP machine consumable PIM artifacts</td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/api4kbs/tree/master">Master</a></td>
+    <td colspan="2" rowspan="2" align="center" valign="top" bgcolor="#eeeeee">N/A</td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://snyk.io//test/github/API4KBs/api4kbs?targetFile=pom.xml"><img style="max-width: 100%;" src="https://snyk.io//test/github/API4KBs/api4kbs/badge.svg?targetFile=pom.xml" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io//test/github/API4KBs/api4kbs?targetFile=pom.xml" /></a></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/api4kbs/tree/develop">Develop</a></td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-models">KMDP Models</a><br /> Compiles the PIM models into a Java PSM</td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-models/tree/master">Master</a></td>
+    <td align="center" valign="top" bgcolor="#eeeeff">
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=alert_status" alt="" width="148" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=reliability_rating" alt="" width="101" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=security_rating" alt="" width="94" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=sqale_rating" alt="" width="133" height="20" /></div>
+    </td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=coverage" alt="" width="131" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=bugs" alt="" width="78" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=vulnerabilities" alt="" width="127" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-models&amp;metric=code_smells" alt="" width="123" height="20" /></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-models/tree/develop">Develop</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeff"><a href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-models">Last Build</a></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-standard-models-impl">KMDP Standard Models</a><br /> Java implementation of standard schemas, languages and metamodels</td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-standard-models-impl/tree/master">Master</a></td>
+    <td align="center" valign="top" bgcolor="#eeeeee">
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=alert_status" alt="" width="148" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=reliability_rating" alt="" width="101" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=security_rating" alt="" width="94" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=sqale_rating" alt="" width="133" height="20" /></div>
+    </td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=coverage" alt="" width="131" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=bugs" alt="" width="78" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=vulnerabilities" alt="" width="127" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-standard-models-impl&amp;metric=code_smells" alt="" width="123" height="20" /></td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-standard-models-impl/tree/develop">Develop</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeee"><a href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-standard-models-impl">Last Build</a></td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-archetype">KMDP Spring Maven Archetype</a><br /> Infrastructure for a Spring-based, ReSTful implementation of the APIs</td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-archetype/tree/master">Master</a></td>
+    <td align="center" valign="top" bgcolor="#eeeeff">
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=alert_status" alt="" width="148" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=reliability_rating" alt="" width="101" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=security_rating" alt="" width="94" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=sqale_rating" alt="" width="133" height="20" /></div>
+    </td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=coverage" alt="" width="131" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=bugs" alt="" width="78" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=vulnerabilities" alt="" width="127" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-archetype&amp;metric=code_smells" alt="" width="123" height="20" /></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-archetype/tree/develop">Develop</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeff"><a href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-archetype">Last Build</a></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-api">KMDP API Framework</a><br /> Generates a Java+Spring Web Service Framework PSM</td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-api/tree/master">Master</a></td>
+    <td align="center" valign="top" bgcolor="#eeeeee">
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=alert_status" alt="" width="148" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=reliability_rating" alt="" width="101" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=security_rating" alt="" width="94" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=sqale_rating" alt="" width="133" height="20" /></div>
+    </td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><!--<img
                   src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=coverage"
-                  alt="" width="131" height="20">--><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=bugs"
-              alt="" width="78" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=vulnerabilities"
-              alt="" width="127" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=code_smells"
-              alt="" width="123" height="20"></td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/kmdp-api/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-api.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-api/4.0.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-api/images/download.svg?version=4.0.1"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"
-            align="center"><a
-href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-api">Last
-
-
-
-              Build</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h5>Services</h5>
-    <table width="75%" border="1" cellspacing="2" cellpadding="2">
-      <tbody>
-        <tr>
-          <td valign="top" bgcolor="#ffffee" align="center"><font
-              size="+1"><b>Module</b></font><br>
-          </td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Source</font><br>
-            </b><a href="https://github.com/API4KBs/">GitHub</a><br>
-          </td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">CI </font><br>
-            </b><a href="https://travis-ci.com/API4KBs">Travis</a><b><br>
-            </b></td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Maven Repo</font><br>
-            </b><a href="https://bintray.com/api4kbs">Bintray</a><b><br>
-            </b></td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#ffffee"
-            align="center"><b><font size="+1">Quality</font><br>
-            </b><a
-              href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><b><br>
-            </b></td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Vulnerabilities</font><br>
-            </b><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><b><br>
-            </b></td>
-        </tr>
-        <tr>
-          <td rowspan="1" colspan="7" valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
-              href="https://github.com/API4KBs/kmdp-language">Transrepresentation
-
-
-              ("Language") Service</a><br>
-            Functions for the syntactic manipulation of Knowledge
-            Artifacts <br>
-            (e.g. parsing/serialization, validation, translation)&nbsp;
-            <br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-language/tree/master">Master<br>
-            </a></td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-language.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-language/2.4.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-language/images/download.svg?version=2.4.0"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center">
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=alert_status"
-                alt="" width="148" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=reliability_rating"
-                alt="" width="101" height="20"><br>
-              <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=security_rating"
-                alt="" width="94" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=sqale_rating"
-                alt="" width="133" height="20"><br>
-            </div>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=coverage"
-              alt="" width="131" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=bugs"
-              alt="" width="78" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=vulnerabilities"
-              alt="" width="127" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=code_smells"
-              alt="" width="123" height="20"></td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-language/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-              src="https://travis-ci.com/API4KBs/kmdp-language.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-language/2.4.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-language/images/download.svg?version=2.4.1"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"
-            align="center"><a
-href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-language">Last
-
-              Build</a></td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee"><a
-              href="https://github.com/API4KBs/kmdp-artifact-repository">Knowledge
-
-
-              Artifact Repository - JCR</a><br>
-            JCR-based persistence layer to support the storage and
-            retrieval of Knowledge Artifacts </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/kmdp-artifact-repository/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-src="https://travis-ci.com/API4KBs/kmdp-artifact-repository.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-artifact-repository/2.4.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-artifact-repository/images/download.svg?version=2.4.0"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center">
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=alert_status"
-                alt="" width="148" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=reliability_rating"
-                alt="" width="101" height="20"><br>
-              <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=security_rating"
-                alt="" width="94" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=sqale_rating"
-                alt="" width="133" height="20"><br>
-            </div>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=coverage"
-              alt="" width="131" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=bugs"
-              alt="" width="78" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=vulnerabilities"
-              alt="" width="127" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=code_smells"
-              alt="" width="123" height="20"></td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/kmdp-artifact-repository/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-src="https://travis-ci.com/API4KBs/kmdp-artifact-repository.svg?branch=develop"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-artifact-repository/2.4.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-artifact-repository/images/download.svg?version=2.4.1"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"
-            align="center"><a
-href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-artifact-repository">Last
-
-              Build</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff"><a
-              href="https://github.com/API4KBs/kmdp-asset-repository">Knowledge
-
-              Asset Repository</a><br>
-            Logical Repository with support for metadata, discovery and
-            content negotiation <br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-asset-repository/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://travis-ci.com/API4KBs/kmdp-asset-repository.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-asset-repository/2.4.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-asset-repository/images/download.svg?version=2.4.0"></a>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center">
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=alert_status"
-                alt="" width="148" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=reliability_rating"
-                alt="" width="101" height="20"><br>
-              <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=security_rating"
-                alt="" width="94" height="20"><br>
-            </div>
-            <div><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=sqale_rating"
-                alt="" width="133" height="20"><br>
-            </div>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=coverage"
-              alt="" width="131" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=bugs"
-              alt="" width="78" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=vulnerabilities"
-              alt="" width="127" height="20"><br>
-            <img
-src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=code_smells"
-              alt="" width="123" height="20"></td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/kmdp-asset-repository/tree/develop">Develop</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://travis-ci.com/API4KBs/kmdp-asset-repository.svg?branch=develop"
-              alt="" width="98" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/kmdp-asset-repository/2.4.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/kmdp-asset-repository/images/download.svg?version=2.4.1"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"
-            align="center"><a
-href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-asset-repository">Last
-
-              Build</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeee">Knowledge
-
-
-
-            Base<br>
-            COMING SOON<br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeee" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><br>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeee"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1" valign="top" bgcolor="#eeeeff">Inference<br>
-            COMING SOON<br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top" bgcolor="#eeeeff" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><br>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff"><br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h5>Build Tools</h5>
-    <table width="75%" border="1" cellspacing="2" cellpadding="2">
-      <tbody>
-        <tr>
-          <td valign="top" bgcolor="#ffffee" align="center"><font
-              size="+1"><b>Module</b></font><br>
-          </td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Source</font><br>
-            </b><a href="https://github.com/API4KBs/">GitHub</a><br>
-          </td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">CI </font><br>
-            </b><a href="https://travis-ci.com/API4KBs">Travis</a><b><br>
-            </b></td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Maven Repo</font><br>
-            </b><a href="https://bintray.com/api4kbs">Bintray</a><b><br>
-            </b></td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#ffffee"
-            align="center"><b><font size="+1">Quality</font><br>
-            </b><a
-              href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><b><br>
-            </b></td>
-          <td valign="top" bgcolor="#ffffee" align="center"><b><font
-                size="+1">Vulnerabilities</font><br>
-            </b><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><b><br>
-            </b></td>
-        </tr>
-        <tr>
-          <td rowspan="1" colspan="7" valign="top"><br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="1" colspan="1" valign="top" bgcolor="#eeeeff"><a
-href="https://github.com/API4KBs/maven-cfg-archetype-plugin">Configurable
-
-
-
-              Maven Archetype Plugin</a><br>
-            Instantiates Mvn Archetypes using parameters from
-            .properties files.<br>
-            Used to generate client and server modules for the&nbsp;
-            'API Framework' </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-              href="https://github.com/API4KBs/maven-cfg-archetype-plugin/tree/master">Master</a><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><img
-src="https://travis-ci.com/API4KBs/maven-cfg-archetype-plugin.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/maven-cfg-archetype-plugin/0.2.0/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/maven-cfg-archetype-plugin/images/download.svg?version=0.2.0"></a>
-          </td>
-          <td rowspan="1" colspan="2" valign="top" bgcolor="#eeeeff"
-            align="center">N/A<br>
-            <br>
-          </td>
-          <td valign="top" bgcolor="#eeeeff" align="center">N/A<br>
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="1" colspan="1" valign="top" bgcolor="#eeeeee"><a
-              href="https://github.com/API4KBs/maven-enforcer-rules">Maven
-
-
-
-              Enforcer Rules</a> (optional)<br>
-            Validates quality criteria for 'master' branches </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-              href="https://github.com/API4KBs/maven-enforcer-rules/tree/master">Master</a>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><img
-src="https://travis-ci.com/API4KBs/maven-enforcer-rules.svg?branch=master"
-              alt="" width="90" height="20"><br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center"><a
-href="https://bintray.com/api4kbs/API4KP-Mvn-Repo/maven-enforcer-rules/1.0.1/link"><img
-src="https://api.bintray.com/packages/api4kbs/API4KP-Mvn-Repo/maven-enforcer-rules/images/download.svg?version=1.0.1"></a>
-          </td>
-          <td colspan="2" valign="top" bgcolor="#eeeeee" align="center">
-            N/A<br>
-            <br>
-          </td>
-          <td valign="top" bgcolor="#eeeeee" align="center">N/A</td>
-        </tr>
-      </tbody>
-    </table>
-    <ol>
-    </ol>
-  </body>
-</html>
+                  alt="" width="131" height="20">--><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=bugs" alt="" width="78" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=vulnerabilities" alt="" width="127" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-api&amp;metric=code_smells" alt="" width="123" height="20" /></td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-api/tree/develop">Develop</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeee"><a href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-api">Last Build</a></td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+<h5>Services</h5>
+<table border="1" width="75%" cellspacing="2" cellpadding="2">
+  <tbody>
+  <tr>
+    <td align="center" valign="top" bgcolor="#ffffee"><span style="font-size: xx-small;"><strong>Module</strong></span></td>
+    <td align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Source</span><br /> </strong><a href="https://github.com/API4KBs/">GitHub</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Quality</span><br /> </strong><a href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><strong><br /> </strong></td>
+    <td align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Vulnerabilities</span><br /> </strong><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><strong><br /> </strong></td>
+  </tr>
+  <tr>
+    <td colspan="5" rowspan="1" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-language">Transrepresentation ("Language") Service</a><br /> Functions for the syntactic manipulation of Knowledge Artifacts <br /> (e.g. parsing/serialization, validation, translation)&nbsp;</td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-language/tree/master">Master<br /> </a></td>
+    <td align="center" valign="top" bgcolor="#eeeeff">
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=alert_status" alt="" width="148" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=reliability_rating" alt="" width="101" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=security_rating" alt="" width="94" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=sqale_rating" alt="" width="133" height="20" /></div>
+    </td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=coverage" alt="" width="131" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=bugs" alt="" width="78" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=vulnerabilities" alt="" width="127" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-language&amp;metric=code_smells" alt="" width="123" height="20" /></td>
+    <td align="center" valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-language/tree/develop">Develop</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeff"><a href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-language">Last Build</a></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-artifact-repository">Knowledge Artifact Repository - JCR</a><br /> JCR-based persistence layer to support the storage and retrieval of Knowledge Artifacts</td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-artifact-repository/tree/master">Master</a></td>
+    <td align="center" valign="top" bgcolor="#eeeeff">
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=alert_status" alt="" width="148" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=reliability_rating" alt="" width="101" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=security_rating" alt="" width="94" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=sqale_rating" alt="" width="133" height="20" /></div>
+    </td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=coverage" alt="" width="131" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=bugs" alt="" width="78" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=vulnerabilities" alt="" width="127" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-artifact-repository&amp;metric=code_smells" alt="" width="123" height="20" /></td>
+    <td align="center" valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-artifact-repository/tree/develop">Develop</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeee"><a href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-artifact-repository">Last Build</a></td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-asset-repository">Knowledge Asset Repository</a><br /> Logical Repository with support for metadata, discovery and content negotiation</td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-asset-repository/tree/master">Master</a></td>
+    <td align="center" valign="top" bgcolor="#eeeeff">
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=alert_status" alt="" width="148" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=reliability_rating" alt="" width="101" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=security_rating" alt="" width="94" height="20" /></div>
+      <div><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=sqale_rating" alt="" width="133" height="20" /></div>
+    </td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=coverage" alt="" width="131" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=bugs" alt="" width="78" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=vulnerabilities" alt="" width="127" height="20" /><br /> <img src="https://sonarcloud.io/api/project_badges/measure?project=API4KBs_kmdp-asset-repository&amp;metric=code_smells" alt="" width="123" height="20" /></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-asset-repository/tree/develop">Develop</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeff"><a href="https://sonarcloud.io/dashboard?branch=develop&amp;id=API4KBs_kmdp-asset-repository">Last Build</a></td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/kmdp-knowledgebase-service">Knowledge Base</a><br /> Incremental construction of complex knowledge bases with semantic manipulation</td>
+    <td align="center" valign="top" bgcolor="#eeeeee">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeee">&nbsp;</td>
+    <td colspan="2" rowspan="1" valign="top" bgcolor="#eeeeee">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeee">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-reasoning-service">Inference</a><br />Knowledge-based reasoning: verification, classification, derivation, proofing</td>
+    <td align="center" valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td colspan="2" rowspan="1" valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="2" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/kmdp-complex-ops-impl">Complex Operations</a></td>
+    <td align="center" valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td colspan="2" rowspan="1" valign="top" bgcolor="#eeeeff">&nbsp;</td>
+    <td valign="top" bgcolor="#eeeeff">&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+<h5>Build Tools</h5>
+<table border="1" width="75%" cellspacing="2" cellpadding="2">
+  <tbody>
+  <tr>
+    <td align="center" valign="top" bgcolor="#ffffee"><span style="font-size: xx-small;"><strong>Module</strong></span></td>
+    <td align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Source</span><br /> </strong><a href="https://github.com/API4KBs/">GitHub</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Quality</span><br /> </strong><a href="https://sonarcloud.io/organizations/api4kbs/projects">SonarCloud</a><strong><br /> </strong></td>
+    <td align="center" valign="top" bgcolor="#ffffee"><strong><span style="font-size: xx-small;">Vulnerabilities</span><br /> </strong><a href="https://app.snyk.io/org/api4kp/projects">Snyk</a><strong><br /> </strong></td>
+  </tr>
+  <tr>
+    <td colspan="5" rowspan="1" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/maven-cfg-archetype-plugin">Configurable Maven Archetype Plugin</a><br /> Instantiates Mvn Archetypes using parameters from .properties files.<br /> Used to generate client and server modules for the&nbsp; 'API Framework'</td>
+    <td align="center" valign="top" bgcolor="#eeeeff"><a href="https://github.com/API4KBs/maven-cfg-archetype-plugin/tree/master">Master</a></td>
+    <td colspan="2" rowspan="1" align="center" valign="top" bgcolor="#eeeeff">N/A</td>
+    <td align="center" valign="top" bgcolor="#eeeeff">N/A</td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/maven-enforcer-rules">Maven Enforcer Rules</a> (optional)<br /> Validates quality criteria for 'master' branches</td>
+    <td align="center" valign="top" bgcolor="#eeeeee"><a href="https://github.com/API4KBs/maven-enforcer-rules/tree/master">Master</a></td>
+    <td colspan="2" align="center" valign="top" bgcolor="#eeeeee">N/A</td>
+    <td align="center" valign="top" bgcolor="#eeeeee">N/A</td>
+  </tr>
+  </tbody>
+</table>
