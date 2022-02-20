@@ -59,6 +59,11 @@ git clone https://github.com/API4KBs/kmdp-reasoning-service.git
 git checkout develop
 mvn clean install
 
+## Spring monitoring
+https://github.com/API4KBs/kmdp-spring-monitoring.git
+git checkout develop
+mvn clean install
+
 ## Knowledge Asset Repository (server)
 git clone https://github.com/API4KBs/kmdp-asset-repository.git
 git checkout develop
@@ -80,6 +85,3 @@ mvn clean install
 git clone https://github.com/API4KBs/demo-terminology-service.git
 git checkout develop
 mvn clean install
-
-
-
