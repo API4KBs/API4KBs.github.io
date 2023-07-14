@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Roadmap"
+date:   2023-07-14 10:30:00 -0500
+categories: plans
+---
+
+The recent timeline of the [standard](https://www.omg.org/spec/API4KP/)
+
+* 08/20: API4KP 1.0-Alpha published
+* 04/21: API4KP 1.0-Beta1 published
+* 02/23: API4KP 1.0-Beta2 published
+* 09/23: API4KP 1.0, 1.1-Alpha (projected)
+
+At the time of this post, the codebase is still based on 1.0-Alpha, but also contains some fixes and/or ideas that will be incorporated in version 1.1.
+The current plans are to upgrade the core implementation, and realign to 1.0/1.1-Alpha during Q3 2023 - in fact, the development is ongoing as I am writing this post.
+
+-- Davide
