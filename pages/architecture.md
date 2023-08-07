@@ -1,6 +1,8 @@
-
-# PIM to PSM Architectural principles
-
+---
+layout: page
+title: Architecture Overview
+permalink: /architecture
+---
 
 The Java+Spring PSM is generated programmatically from the source, normative PIM models,
 using a toolchain:

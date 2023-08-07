@@ -1,9 +1,8 @@
 ---
-layout: home
+layout: page
+title: API for Knowledge Platforms (API4KP)
+permalink: /
 ---
-
-API for Knowledge Platforms (API4KP)
-====================================
 
 Technical Specification and Implementation
 ------------------------------------------
@@ -20,9 +19,9 @@ The API4KP standard is based on a model-driven architecture that combines UML mo
 
 This implementation is maintained by a team working at Mayo Clinic, in collaboration with community partners.
 
-*   [Architecture Overview](pages/architecture.html)
+*   [Architecture Overview](architecture)
 
-*   [Build Dashboard](pages/build.html)
+*   [Build Dashboard](build)
 
 Disclaimer:  
 This implementation is offered 'as is', with no guarantee of support, under the Apache 2.0 license. 
